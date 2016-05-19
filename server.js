@@ -16,7 +16,7 @@
           console.log('Message received:' + message.text);
          
 
-          socket.broadcast.emit('message', message);
+          io.emit('message', message);
       });
 
       socket.emit('message', {
